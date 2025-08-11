@@ -17,7 +17,7 @@ const Navbar = () => {
                     <a href="#Home"
                         className="btn btn-sm btn-ghost"
                     >
-                        Hello
+                        Accueil
                     </a>
                 </li>
                 <li>
