@@ -6,13 +6,15 @@ import imgREACT from "../assets/techno/react.png";
 import imgHTML from "../assets/techno/html.png";
 import imgNEXT from "../assets/techno/next-js.webp";
 import imgNODE from "../assets/techno/node-js.png";
-import imgTYPE from "../assets/techno/typescript.svg";
+import imgPhp from "../assets/techno/php.png";
 import imgTAILWIND from "../assets/techno/tailwind.png";
-import imgPRISMA from "../assets/techno/prisma.webp";
+import imgLaravel from "../assets/techno/laravel.png";
+import imgMysql from "../assets/techno/mysql.png"
 
 import google from "../assets/companies/google.png";
 import meta from "../assets/companies/meta.webp";
 import amazon from "../assets/companies/amazon.png";
+
 
 
 
@@ -23,9 +25,10 @@ const skills = [
     { id: 4, name: "React", image: imgREACT },
     { id: 5, name: "Node.js", image: imgNODE },
     { id: 6, name: "Tailwind CSS", image: imgTAILWIND },
-    { id: 7, name: "TypeScript", image: imgTYPE },
+    { id: 7, name: "php", image: imgPhp },
     { id: 8, name: "Next.js", image: imgNEXT },
-    { id: 9, name: "Prisma", image: imgPRISMA },
+    { id: 9, name: "Laravel", image: imgLaravel },
+    {id:10, name:"MySql",image:imgMysql}
 ];
 
 
