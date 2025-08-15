@@ -15,8 +15,8 @@ const projects = [
         title: 'Gestionnaire de tâches',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni deserunt debitis recusandae ab harum totam, eum facilis et ratione officia ut inventore aspernatur',
         technologies: ['React', 'Node.js', 'Tailwind CSS'],
-        demoLink: '#',
-        repoLink: '#',
+        demoLink: 'https://www.webmobilefirst.com/en/screencasts/rlmhq80eby4spc/',
+        repoLink: 'https://github.com/houssamelmalki-work/houssamShop',
         image: img1,
     },
     {
@@ -42,28 +42,12 @@ const projects = [
         title: 'Application de Chat en temps réel',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni deserunt debitis recusandae ab harum totam, eum facilis et ratione officia ut inventore aspernatur',
         technologies: ['React', 'Socket.io', 'Express.js'],
-        demoLink: '#',
-        repoLink: '#',
+        demoLink: 'https://www.webmobilefirst.com/en/screencasts/rlmhq80eby4spc/',
+        repoLink: 'https://github.com/houssamelmalki-work/My-Portfolio',
         image: img4,
     },
-    {
-        id: 5,
-        title: 'Système de réservation de salles',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni deserunt debitis recusandae ab harum totam, eum facilis et ratione officia ut inventore aspernatur',
-        technologies: ['Next.js', 'MongoDB', 'Chakra UI'],
-        demoLink: '#',
-        repoLink: '#',
-        image: img5,
-    },
-    {
-        id: 6,
-        title: 'Analyseur de sentiment',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni deserunt debitis recusandae ab harum totam, eum facilis et ratione officia ut inventore aspernatur',
-        technologies: ['Python', 'Flask', 'NLTK'],
-        demoLink: '#',
-        repoLink: '#',
-        image: img6,
-    },
+
+ 
 ];
 
 const Projects = () => {
@@ -92,16 +76,32 @@ const Projects = () => {
                                 </span>
                             ))}
                         </div>
-                        <div className="flex">
-                            <a className="btn btn-accent w-2/3" href={project.demoLink}>
-                                Demo
-                                <Video className="w-4" />
-                            </a>
+                       <div className="flex">
+    <a 
+        className={`btn w-2/3 ${
+            project.demoLink === '#' 
+                ? 'btn-disabled cursor-not-allowed opacity-50' 
+                : 'btn-accent hover:btn-accent-focus'
+        }`} 
+        href={project.demoLink === '#' ? undefined : project.demoLink}
+        onClick={project.demoLink === '#' ? (e) => e.preventDefault() : undefined}
+    >
+        Demo
+        <Video className="w-4" />
+    </a>
 
-                            <a className="btn btn-neutral w-1/3 ml-2" href={project.repoLink}>
-                                <Github className="w-4" />
-                            </a>
-                        </div>
+    <a 
+        className={`btn w-1/3 ml-2 ${
+            project.repoLink === '#' 
+                ? 'btn-disabled cursor-not-allowed opacity-50' 
+                : 'btn-neutral hover:btn-neutral-focus'
+        }`}
+        href={project.repoLink === '#' ? undefined : project.repoLink}
+        onClick={project.repoLink === '#' ? (e) => e.preventDefault() : undefined}
+    >
+        <Github className="w-4" />
+    </a>
+</div>
                     </div>
                 ))}
             </div>

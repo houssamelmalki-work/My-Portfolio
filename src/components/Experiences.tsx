@@ -28,7 +28,7 @@ const skills = [
     { id: 7, name: "php", image: imgPhp },
     { id: 8, name: "Next.js", image: imgNEXT },
     { id: 9, name: "Laravel", image: imgLaravel },
-    {id:10, name:"MySql",image:imgMysql}
+    { id: 10, name: "MySql", image: imgMysql }
 ];
 
 
@@ -39,19 +39,19 @@ const experiences = [
         company: "Tele 24",
         period: "juillet 2024- Présent",
         description: [
-            "Développement de nouvelles fonctionnalités pour Google Maps.",
-            "Optimisation des performances de l'application.",
+            "Résoudre des problèmes techniques dans l'administration.",
+            "Facturation des dossiers d’hospitalisation ou de consultation des patients.",
         ],
         image: tele24,
     },
     {
         id: 2,
         role: "Fullstack Developer",
-        company: "Meta",
-        period: "Jan 2021 - Août 2022",
+        company: "Soccodam",
+        period: "Jan 2024 - fev 2024",
         description: [
-            "Création d'une plateforme interne de collaboration pour les équipes.",
-            "Mise en place d'une architecture scalable et optimisée.",
+            "Création de nouveaux comptes pour les nouveaux employés.",
+            "Résoudre les problèmes techniques et tout ce qui est lié au réseau."
         ],
         image: socc,
     },
@@ -61,8 +61,9 @@ const experiences = [
         company: "Reiansa",
         period: "Avril 2023 - May 2023",
         description: [
-            "Développement d'une interface utilisateur pour Amazon Web Services.",
-            "Implémentation des tests unitaires et E2E.",
+            "Création d’un site web de vente de matériel médical.",
+
+            "Un stage et en même temps une expérience professionnelle."
         ],
         image: riansa,
     },
@@ -94,19 +95,19 @@ const Experiences = () => {
                             key={expericence.id}
                             className="flex flex-col bg-base-200 p-5 rounded-xl shadow-lg"
                         >
-                           <div className="flex items-center">
-    <img
-        src={expericence.image}
-        alt={expericence.company}
-        className="object-cover h-16 w-16 rounded-lg"
-    />
-    <div className="ml-4">
-        <h1 className="text-xl text-accent font-bold">
-            {expericence.role} , {expericence.company}
-        </h1>
-        <span className="text-sm">{expericence.period}</span>
-    </div>
-</div>
+                            <div className="flex items-center">
+                                <img
+                                    src={expericence.image}
+                                    alt={expericence.company}
+                                    className="object-cover h-16 w-16 rounded-lg"
+                                />
+                                <div className="ml-4">
+                                    <h1 className="text-xl text-accent font-bold">
+                                        {expericence.role} , {expericence.company}
+                                    </h1>
+                                    <span className="text-sm">{expericence.period}</span>
+                                </div>
+                            </div>
                             <ul className="list-disc ml-16 mt-2">
                                 {expericence.description.map((desc, index) => (
                                     <li key={index}>
