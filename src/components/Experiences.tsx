@@ -11,9 +11,9 @@ import imgTAILWIND from "../assets/techno/tailwind.png";
 import imgLaravel from "../assets/techno/laravel.png";
 import imgMysql from "../assets/techno/mysql.png"
 
-import google from "../assets/companies/google.png";
-import meta from "../assets/companies/meta.webp";
-import amazon from "../assets/companies/amazon.png";
+import tele24 from "../assets/companies/tele24.png";
+import socc from "../assets/companies/socc.png";
+import riansa from "../assets/companies/riansa.png";
 
 
 
@@ -35,14 +35,14 @@ const skills = [
 const experiences = [
     {
         id: 1,
-        role: "Software Engineer",
-        company: "Google",
-        period: "Sep 2022 - Présent",
+        role: "Technicien de baf central",
+        company: "Tele 24",
+        period: "juillet 2024- Présent",
         description: [
             "Développement de nouvelles fonctionnalités pour Google Maps.",
             "Optimisation des performances de l'application.",
         ],
-        image: google,
+        image: tele24,
     },
     {
         id: 2,
@@ -53,18 +53,18 @@ const experiences = [
             "Création d'une plateforme interne de collaboration pour les équipes.",
             "Mise en place d'une architecture scalable et optimisée.",
         ],
-        image: meta,
+        image: socc,
     },
     {
         id: 3,
         role: "Frontend Developer",
-        company: "Amazon",
-        period: "Mai 2019 - Déc 2020",
+        company: "Reiansa",
+        period: "Avril 2023 - May 2023",
         description: [
             "Développement d'une interface utilisateur pour Amazon Web Services.",
             "Implémentation des tests unitaires et E2E.",
         ],
-        image: amazon,
+        image: riansa,
     },
 ];
 
@@ -94,19 +94,19 @@ const Experiences = () => {
                             key={expericence.id}
                             className="flex flex-col bg-base-200 p-5 rounded-xl shadow-lg"
                         >
-                            <div className="flex items-center">
-                                <img
-                                    src={expericence.image}
-                                    alt={expericence.company}
-                                    className="object-cover h-10 w-10"
-                                />
-                                <div className="ml-4">
-                                    <h1 className="text-xl text-accent font-bold">
-                                        {expericence.role} , {expericence.company}
-                                    </h1>
-                                    <span className="text-sm">{expericence.period}</span>
-                                </div>
-                            </div>
+                           <div className="flex items-center">
+    <img
+        src={expericence.image}
+        alt={expericence.company}
+        className="object-cover h-16 w-16 rounded-lg"
+    />
+    <div className="ml-4">
+        <h1 className="text-xl text-accent font-bold">
+            {expericence.role} , {expericence.company}
+        </h1>
+        <span className="text-sm">{expericence.period}</span>
+    </div>
+</div>
                             <ul className="list-disc ml-16 mt-2">
                                 {expericence.description.map((desc, index) => (
                                     <li key={index}>
