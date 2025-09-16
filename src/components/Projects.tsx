@@ -76,7 +76,7 @@ const Projects = () => {
                         </div>
                        <div className="flex">
     <a 
-        className={`btn w-2/3 ${
+       target="_blank" className={`btn w-2/3 ${
             project.demoLink === '#' 
                 ? 'btn-disabled cursor-not-allowed opacity-50' 
                 : 'btn-accent hover:btn-accent-focus'
@@ -89,7 +89,7 @@ const Projects = () => {
     </a>
 
     <a 
-        className={`btn w-1/3 ml-2 ${
+       target="_blank" className={`btn w-1/3 ml-2 ${
             project.repoLink === '#' 
                 ? 'btn-disabled cursor-not-allowed opacity-50' 
                 : 'btn-neutral hover:btn-neutral-focus'
@@ -98,6 +98,7 @@ const Projects = () => {
         onClick={project.repoLink === '#' ? (e) => e.preventDefault() : undefined}
     >
         <Github className="w-4" />
+       
     </a>
 </div>
                     </div>
