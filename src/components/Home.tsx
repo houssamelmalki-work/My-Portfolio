@@ -14,21 +14,23 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState(''); // 'success', 'error', ''
 
-  // 👉 Remplacez ces valeurs par vos vraies clés EmailJS
+  // Configuration EmailJS
   const EMAILJS_CONFIG = {
     SERVICE_ID: 'service_3h4dw7l',
     TEMPLATE_ID: 'template_txtl115',
     PUBLIC_KEY: 'VHVjTqH_ir5axMc23'
   };
 
-  const handleInputChange = (e) => {
+  // Fix TypeScript error: Add explicit type for event parameter
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e) => {
+  // Fix TypeScript error: Add explicit type for event parameter
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     setStatus('');
@@ -42,8 +44,7 @@ const Home = () => {
           name: formData.name,
           email: formData.email,
           service: formData.service,
-          message: formData.message,
-          to_email: 'votre-email@example.com' // Votre email
+          message: formData.message
         },
         EMAILJS_CONFIG.PUBLIC_KEY
       );
@@ -119,7 +120,7 @@ const Home = () => {
               <X size={24} />
             </button>
 
-            <h2 className="text-2xl font-bold mb-4 text-center">
+            <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">
               Formulaire de contact
             </h2>
 
@@ -180,7 +181,7 @@ const Home = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 placeholder="Votre message..."
-                rows="4"
+                rows={4}
                 className="p-2 border rounded-lg resize-none"
                 required
                 disabled={isLoading}
