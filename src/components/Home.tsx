@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Mail, X, Send, AlertCircle, CheckCircle, Download } from "lucide-react";
 import emailjs from '@emailjs/browser';
-import img from "../assets/img.jpg";
 import imgg from "../assets/imgPRFL.jpg";
 import cv from "../assets/HOUSSAM_CV_PREAPA.pdf" 
 
