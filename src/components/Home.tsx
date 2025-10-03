@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Mail, X, Send, AlertCircle, CheckCircle } from "lucide-react";
+import { Mail, X, Send, AlertCircle, CheckCircle, Download } from "lucide-react";
 import emailjs from '@emailjs/browser';
 import img from "../assets/img.jpg";
+import cv from "../assets/HOUSSAM_CV.pdf"
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -21,7 +22,6 @@ const Home = () => {
     PUBLIC_KEY: 'VHVjTqH_ir5axMc23'
   };
 
-  // Fix TypeScript error: Add explicit type for event parameter
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -29,14 +29,12 @@ const Home = () => {
     });
   };
 
-  // Fix TypeScript error: Add explicit type for event parameter
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     setStatus('');
 
     try {
-      // Envoyer l'email via EmailJS
       const result = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
@@ -52,7 +50,6 @@ const Home = () => {
       console.log('Email envoyé avec succès:', result);
       setStatus('success');
       
-      // Reset du formulaire
       setFormData({
         name: '',
         email: '',
@@ -60,7 +57,6 @@ const Home = () => {
         message: ''
       });
 
-      // Fermer le modal après 2 secondes
       setTimeout(() => {
         setOpenModal(false);
         setStatus('');
@@ -87,13 +83,26 @@ const Home = () => {
           avec 3 ans d'expérience en React <br /> et Node.js. Contactez-moi si
           vous avez besoin de mes services.
         </p>
-        <button
-          onClick={() => setOpenModal(true)}
-          className="btn btn-accent md:w-fit flex items-center gap-2"
-        >
-          <Mail className="w-5 h-5" />
-          Contactez-moi
-        </button>
+        
+        {/* Conteneur des boutons */}
+        <div className="flex flex-col md:flex-row gap-3 items-center md:items-start">
+          <button
+            onClick={() => setOpenModal(true)}
+            className="btn btn-accent w-full md:w-fit flex items-center justify-center gap-2"
+          >
+            <Mail className="w-5 h-5" />
+            Contactez-moi
+          </button>
+
+          <a
+             href={cv}
+             download="CV_HOUSSAM_Developer.pdf"
+            className="btn btn-outline btn-accent w-full md:w-fit flex items-center justify-center gap-2 hover:bg-accent hover:text-white transition-colors"
+          >
+            <Download className="w-5 h-5" />
+            Télécharger CV
+          </a>
+        </div>
       </div>
 
       {/* Image */}
@@ -112,7 +121,6 @@ const Home = () => {
       {openModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-2xl shadow-lg w-96 relative">
-            {/* Bouton X */}
             <button
               onClick={() => setOpenModal(false)}
               className="absolute top-3 right-3 text-gray-600 hover:text-red-500"
@@ -124,7 +132,6 @@ const Home = () => {
               Formulaire de contact
             </h2>
 
-            {/* Messages de statut */}
             {status === 'success' && (
               <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center gap-2">
                 <CheckCircle size={20} />
