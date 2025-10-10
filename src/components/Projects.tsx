@@ -4,6 +4,7 @@ import img1 from '../assets/projects/1.png';
 import img2 from '../assets/projects/2.png';
 import img3 from '../assets/projects/3.png';
 import img4 from '../assets/projects/4.png';
+import img5 from '../assets/projects/5.png';
 import { Github, Video } from "lucide-react";
 
 
@@ -43,6 +44,15 @@ const projects = [
         demoLink: 'https://www.webmobilefirst.com/en/screencasts/rlmhq80eby4spc/',
         repoLink: 'https://github.com/houssamelmalki-work/My-Portfolio',
         image: img4,
+    },
+    {
+        id: 5,
+        title: 'CHESS',
+        description: 'Jeu d’échecs en ligne développé avec React et CSS, offrant une interface moderne inspirée de Chess.com. Conçu pour une expérience stratégique et responsive sur tous les appareils',
+        technologies: ['React', 'css'],
+        demoLink: 'https://www.webmobilefirst.com/en/screencasts/rlmhq80eby4spc/',
+        repoLink: 'https://github.com/houssamelmalki-work/chess-game',
+        image: img5,
     },
 
  
