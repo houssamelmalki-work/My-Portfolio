@@ -7,6 +7,14 @@ import img4 from '../assets/projects/4.png';
 import img5 from '../assets/projects/5.png';
 import img6 from '../assets/projects/6.png';
 import img7 from '../assets/projects/7.png';
+import imgd1 from '../assets/projects/design/1.png';
+import imgd2 from '../assets/projects/design/2.png';
+import imgd3 from '../assets/projects/design/3.png';
+import imgd4 from '../assets/projects/design/4.png';
+import imgd5 from '../assets/projects/design/5.png';
+import imgd6 from '../assets/projects/design/6.png';
+import imgd7 from '../assets/projects/design/7.png';
+import imgd8 from '../assets/projects/design/8.png';
 import { Github, Video, X } from "lucide-react";
 
 const projects = [
@@ -84,9 +92,51 @@ const projects = [
 
     // DESIGN
     {
+        id: 1,
+        title: 'Snake design',
+        image: imgd1,
+        category: 'design'
+    },
+    {
+        id: 2,
+        title: 'Game backgrund',
+        image: imgd2,
+        category: 'design'
+    },
+    {
+        id: 3,
+        title: 'Travel',
+        image: imgd3,
+        category: 'design'
+    },
+    {
+        id: 4,
+        title: ' Cap',
+        image: imgd4,
+        category: 'design'
+    },
+    {
+        id: 5,
+        title: 'Snake design',
+        image: imgd5,
+        category: 'design'
+    },
+    {
+        id: 6,
+        title: 'T-Shirt',
+        image: imgd6,
+        category: 'design'
+    },
+    {
+        id: 7,
+        title: 'Papillon',
+        image: imgd7,
+        category: 'design'
+    },
+     {
         id: 8,
-        title: 'Votre Projet Design 1',
-        image: img7,
+        title: 'Real Madrid Post',
+        image: imgd8,
         category: 'design'
     },
 ];
