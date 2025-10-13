@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Title from "./Title"
+import Title from "./Title";
 import img1 from '../assets/projects/1.png';
 import img2 from '../assets/projects/2.png';
 import img3 from '../assets/projects/3.png';
@@ -7,10 +7,6 @@ import img4 from '../assets/projects/4.png';
 import img5 from '../assets/projects/5.png';
 import img6 from '../assets/projects/6.png';
 import img7 from '../assets/projects/7.png';
-// Importez vos images de design ici
-// import design1 from '../assets/projects/design1.png';
-// import design2 from '../assets/projects/design2.png';
-// import design3 from '../assets/projects/design3.png';
 import { Github, Video, X } from "lucide-react";
 
 const projects = [
@@ -86,32 +82,18 @@ const projects = [
         category: 'web'
     },
 
-    // DESIGN - Ajouter vos projets de design ici
-    
+    // DESIGN
     {
         id: 8,
         title: 'Votre Projet Design 1',
         image: img7,
         category: 'design'
-    },/*
-    {
-        id: 9,
-        title: 'Votre Projet Design 2',
-        image: design2,
-        category: 'design'
     },
-    {
-        id: 10,
-        title: 'Votre Projet Design 3',
-        image: design3,
-        category: 'design'
-    },
-    */
 ];
 
 const Projects = () => {
     const [activeTab, setActiveTab] = useState('web');
-    const [selectedDesignImage, setSelectedDesignImage] = useState(null);
+    const [selectedDesignImage, setSelectedDesignImage] = useState<string | null>(null); // ✅ correction TS2345
 
     const filteredProjects = projects.filter(project => project.category === activeTab);
 
@@ -145,7 +127,6 @@ const Projects = () => {
 
             {/* Grille de projets */}
             {activeTab === 'web' ? (
-                // Vue Web & Jeux avec toutes les infos
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {filteredProjects.length > 0 ? (
                         filteredProjects.map((project) => (
@@ -164,13 +145,16 @@ const Projects = () => {
                                     </h1>
                                     <p className="text-sm text-base-content/80">{project.description}</p>
                                 </div>
+
+                                {/* ✅ Correction TS18048 */}
                                 <div className="flex flex-wrap gap-2 my-3">
-                                    {project.technologies.map((tech, idx) => (
+                                    {project.technologies?.map((tech, idx) => (
                                         <span key={idx} className="badge badge-accent badge-sm">
                                             {tech}
                                         </span>
                                     ))}
                                 </div>
+
                                 <div className="flex gap-2">
                                     <a 
                                         target="_blank"
@@ -211,7 +195,7 @@ const Projects = () => {
                     )}
                 </div>
             ) : (
-                // Vue Design avec galerie d'images
+                // Vue Design
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {filteredProjects.length > 0 ? (
                         filteredProjects.map((project) => (
@@ -240,7 +224,7 @@ const Projects = () => {
                 </div>
             )}
 
-            {/* Modal pour afficher l'image agrandie */}
+            {/* Modal Image Agrandie */}
             {selectedDesignImage && (
                 <div 
                     className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
@@ -250,7 +234,6 @@ const Projects = () => {
                         className="bg-base-300 rounded-xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col relative"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        {/* Bouton X */}
                         <button
                             onClick={() => setSelectedDesignImage(null)}
                             className="absolute top-4 right-4 bg-base-100 hover:bg-base-200 text-base-content p-2 rounded-full transition-all z-10 shadow-lg"
@@ -259,7 +242,6 @@ const Projects = () => {
                             <X className="w-6 h-6" />
                         </button>
 
-                        {/* Image */}
                         <div className="flex-1 overflow-auto flex items-center justify-center">
                             <img
                                 src={selectedDesignImage}
@@ -271,7 +253,7 @@ const Projects = () => {
                 </div>
             )}
         </div>
-    )
+    );
 }
 
-export default Projects
+export default Projects;
