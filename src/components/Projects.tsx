@@ -15,6 +15,8 @@ import imgd5 from '../assets/projects/design/5.png';
 import imgd6 from '../assets/projects/design/6.png';
 import imgd7 from '../assets/projects/design/7.png';
 import imgd8 from '../assets/projects/design/8.png';
+import imgd9 from '../assets/projects/design/9.png';
+import imgd10 from '../assets/projects/design/10.png';
 import { Github, Video, X } from "lucide-react";
 
 const projects = [
@@ -137,6 +139,18 @@ const projects = [
         id: 8,
         title: 'Real Madrid Post',
         image: imgd8,
+        category: 'design'
+    },
+      {
+        id: 9,
+        title: 'Jus ',
+        image: imgd9,
+        category: 'design'
+    },
+      {
+        id: 10,
+        title: 'Visite',
+        image: imgd10,
         category: 'design'
     },
 ];
