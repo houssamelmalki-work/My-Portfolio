@@ -5,6 +5,8 @@ import img2 from '../assets/projects/2.png';
 import img3 from '../assets/projects/3.png';
 import img4 from '../assets/projects/4.png';
 import img5 from '../assets/projects/5.png';
+import img6 from '../assets/projects/6.png';
+import img7 from '../assets/projects/7.png';
 import { Github, Video } from "lucide-react";
 
 
@@ -54,6 +56,25 @@ const projects = [
         repoLink: 'https://github.com/houssamelmalki-work/chess-game',
         image: img5,
     },
+     {
+        id: 6,
+        title: 'TRAVEL',
+        description: 'HSMTRAVEL - Plateforme de voyage développée avec React, offrant une interface moderne pour des expériences uniques. Conçu pour une planification de voyage intuitive et responsive ',
+        technologies: ['React', 'css'],
+        demoLink: 'https://www.webmobilefirst.com/en/screencasts/rlmhq80eby4spc/',
+        repoLink: 'https://github.com/houssamelmalki-work/travel',
+        image: img6,
+    },
+     {
+        id: 7,
+        title: 'SNAKE GAME',
+        description: 'Snake game marocain développé par HSMDEV, proposant une édition Ramadan aux inspirations culturelles locales. Conçu pour une expérience gaming traditionnelle et moderne ',
+        technologies: ['Python'],
+        demoLink: 'https://www.webmobilefirst.com/en/screencasts/rlmhq80eby4spc/',
+        repoLink: '#',
+        image: img7,
+    },
+
 
  
 ];
