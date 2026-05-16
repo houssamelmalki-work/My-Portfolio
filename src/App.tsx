@@ -21,7 +21,7 @@ export default function App() {
         <Projects/>
       </div>
 
- <Footer/>*
+ <Footer/>
 
     </div>
   )

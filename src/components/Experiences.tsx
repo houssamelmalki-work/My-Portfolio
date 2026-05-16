@@ -37,7 +37,7 @@ const experiences = [
         id: 1,
         role: "Technicien de baf central",
         company: "Tele 24",
-        period: "juillet 2024- Présent",
+        period: "juillet 2024- Juillet 2025",
         description: [
             "Résoudre des problèmes techniques dans l'administration.",
             "Facturation des dossiers d’hospitalisation ou de consultation des patients.",
@@ -48,7 +48,7 @@ const experiences = [
         id: 2,
         role: "Fullstack Developer",
         company: "Soccodam",
-        period: "Jan 2024 - fev 2024",
+        period: "3 mois",
         description: [
             "Création de nouveaux comptes pour les nouveaux employés.",
             "Résoudre les problèmes techniques et tout ce qui est lié au réseau."
@@ -59,7 +59,7 @@ const experiences = [
         id: 3,
         role: "Frontend Developer",
         company: "Reiansa",
-        period: "Avril 2023 - May 2023",
+        period: "3 mois",
         description: [
             "Création d’un site web de vente de matériel médical.",
 
