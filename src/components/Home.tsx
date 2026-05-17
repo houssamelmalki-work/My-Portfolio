@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Mail, X, Send, AlertCircle, CheckCircle, Download } from "lucide-react";
 import emailjs from '@emailjs/browser';
 import imgg from "../assets/imgPRFL.jpg";
-import cv from "../assets/HSM CV DV.pdf" 
+import cv from "../assets/HSM CV DV .pdf" 
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
